@@ -3,45 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zehong Lei - Personal Homepage</title>
+    <meta name="description" content="Zehong Lei - Robotics Researcher specializing in Dynamic Manipulation and Embodied AI. Master's student at Politecnico di Milano.">
+    <title>Zehong Lei | Robotics Researcher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
+        
         <header>
-            <img src="images/avatar.jpg" alt="My Photo" class="avatar">
-            <h1>Zehong Lei</h1>
-            <p>Master Student | Mechatronics and Robotics | Politecnico di Milano </p>
+            <div class="profile-header">
+                <img src="images/avatar.jpg" alt="Zehong Lei" class="avatar">
+                <div class="header-text">
+                    <h1>Zehong Lei</h1>
+                    <p class="subtitle">M.Sc. in Robotics and Mechatronics @ <a href="https://www.polimi.it/" target="_blank">Politecnico di Milano</a></p>
+                    <p class="tagline">Bridging Control Theory & Embodied AI for Dynamic Systems</p>
+                    
+                    <div class="social-links">
+                        <a href="mailto:zehong.lei@mail.polimi.it" class="btn"><i class="fas fa-envelope"></i> Email</a>
+                        <a href="https://github.com/zehong-lei" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                </div>
+            </div>
         </header>
+
+        <hr>
 
         <section class="about">
             <h2>About Me</h2>
-            <p>
-                Welcome to my personal homepage! I am currently pursuing my master degree in Mechanical Engineering at Politecnico di Milano. My research interests include ... .
-            </p>
+            <div class="content-block">
+                <p>
+                    Hello! I am a robotics researcher with a background in <strong>Mechanical Engineering</strong>. 
+                    I am currently completing my Master's degree at Politecnico di Milano, focusing on the intersection of classical <strong>Control Theory</strong> and modern <strong>AI</strong>.
+                </p>
+                <p>
+                    My passion lies in <strong>Underactuated Systems</strong>. I am fascinated by the challenge of making robots not just move, but move <em>intelligently</em> and <em>dynamically</em> in the real world. 
+                    I believe the most elegant robots should mimic the efficiency of biological counterparts rather than fighting against physics.
+                </p>
+                <p>
+                    Currently, I am working on bridging the gap between simulation and reality (Sim-to-Real) using <strong>Differentiable Physics</strong> and <strong>Reinforcement Learning</strong>.
+                </p>
+            </div>
         </section>
 
-        <section class="links">
-            <h2>Links</h2>
-            <ul>
-                <li><a href="zehong.lei@mail.polimi.it">Email</a></li>
-                <li><a href="https://github.com/zehong-lei" target="_blank">GitHub</a></li>
-                <!-- <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li> -->
-            </ul>
+        <section class="interests">
+            <h2>Research Interests</h2>
+            <div class="tags-container">
+                <span class="tag">Dynamic Manipulation</span>
+                <span class="tag">Sim-to-Real Transfer</span>
+                <span class="tag">Model-Based Control (MPC/WBC)</span>
+                <span class="tag">Embodied AI</span>
+                <span class="tag">Underactuated Robotics</span>
+            </div>
         </section>
 
         <section class="projects">
             <h2>Selected Projects</h2>
-            <ul>
-                <li><strong>Industrial robotics</strong> </li>
-                <li><strong></strong> </li>
-            </ul>
+            
+            <div class="project-card featured">
+                <h3>🚀 Current Focus: Agile Manipulation System</h3>
+                <p class="project-desc">
+                    Developing a unified framework for dynamic manipulation combining <strong>Non-linear MPC</strong> and <strong>Reinforcement Learning</strong>. 
+                    Focusing on robust Sim-to-Real transfer using Isaac Gym and ROS 2.
+                    <br><em>(Work in Progress, 2025)</em>
+                </p>
+            </div>
+
+            <div class="project-list">
+                <div class="project-item">
+                    <h4>Aerial Robotics & Visual Perception</h4>
+                    <p>Implemented visual path tracking for UAVs, integrating computer vision algorithms with flight control loops.</p>
+                </div>
+                
+                <div class="project-item">
+                    <h4>Robotic Grasping & Design</h4>
+                    <p>Designed soft/rigid grippers (SolidWorks) and implemented open-loop grasping strategies for manipulator arms.</p>
+                </div>
+
+                <div class="project-item">
+                    <h4>Structural Dynamics Analysis</h4>
+                    <p>Conducted modal analysis for mechanical structures to optimize stiffness and reduce vibration modes.</p>
+                </div>
+                
+                <div class="project-item">
+                    <h4>Bayesian Optimization for PID</h4>
+                    <p>Applied Bayesian Optimization techniques to automatically tune PID parameters for manipulator joint control.</p>
+                </div>
+            </div>
         </section>
 
         <footer>
-            <p>&copy; 2025 Zehong Lei. All rights reserved.</p>
+            <p>&copy; 2025 Zehong Lei. Built with code & caffeine ☕.</p>
         </footer>
     </div>
 </body>
 </html>
-
