@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zehong Lei - M.Sc. student in Mechatronics & Robotics at Politecnico di Milano. Research interests: contact-rich manipulation, locomotion/whole-body control, model-based control, and deep reinforcement learning.">
+    <title>Zehong Lei | Robotics</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <div class="profile-header">
+            <img src="images/avatar.jpg" alt="Zehong Lei" class="avatar">
+            <div class="header-text">
+                <h1>Zehong Lei</h1>
+                <p class="subtitle">M.Sc. in Mechatronics and Robotics @ <a href="https://www.polimi.it/" target="_blank" rel="noopener noreferrer">Politecnico di Milano</a></p>
+                <p class="tagline">Contact-rich embodied control & learning (manipulation + locomotion)</p>
+
+                <div class="social-links">
+                    <a href="mailto:zehong.lei@mail.polimi.it" class="btn"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://github.com/zehong-lei" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="assets/ZehongLei_CV.pdf" class="btn"><i class="fas fa-file"></i> CV (PDF)</a>
+                    <a href="#" class="btn"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                    <a href="#" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <hr>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <div class="content-block">
+            <p>
+                I am a robotics-oriented mechanical engineer with an M.Sc. background in mechatronics and robotics.
+                I earned my B.Eng. in Mechanical Manufacturing Engineering & Automation from Shandong University and am
+                currently an M.Sc. student in Mechanical Engineering (Mechatronics & Robotics track) at Politecnico di Milano.
+            </p>
+            <p>
+                My work focuses on <strong>contact-rich interaction</strong> and <strong>underactuated systems</strong>, aiming to connect
+                <strong>model-based control</strong> (MPC, trajectory optimization, whole-body control) with <strong>learning-based methods</strong>
+                (deep RL, imitation / representation learning) under real-world constraints such as uncertainty, friction, and latency.
+                I value reproducible research artifacts: clear task definitions, unified baselines, and evaluation protocols.
+            </p>
+
+            <ul>
+                <li><strong>Primary focus:</strong> manipulation and contact dynamics, with locomotion / body control as a complementary validation platform.</li>
+                <li><strong>Method interests:</strong> MPC / MPPI / iLQR-DDP, QP-based control, deep RL (PPO-style), sim-to-real robustness.</li>
+                <li><strong>Sensing interests:</strong> interaction-aware perception (contact state, tactile signals) and multimodal feedback for control.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="interests">
+        <h2>Research Interests</h2>
+        <div class="content-block">
+            <div class="tags-container">
+                <span class="tag">Contact-rich manipulation</span>
+                <span class="tag">Locomotion & whole-body control (WBC)</span>
+                <span class="tag">Underactuated / deformable objects</span>
+                <span class="tag">Model predictive control (MPC)</span>
+                <span class="tag">Sampling-based control (MPPI)</span>
+                <span class="tag">Trajectory optimization (iLQR / DDP)</span>
+                <span class="tag">Deep reinforcement learning (PPO)</span>
+                <span class="tag">Sim-to-real robustness</span>
+                <span class="tag">Tactile & multimodal interaction</span>
+                <span class="tag">Differentiable physics</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="skill">
+        <h2>Skills</h2>
+        <div class="content-block">
+            <ul>
+                <li><strong>Programming:</strong> Python (primary), C++ (basic), MATLAB</li>
+                <li><strong>Robotics:</strong> ROS2, URDF/xacro, TF, simulation workflows (Isaac Gym / Gazebo-class simulators)</li>
+                <li><strong>Learning:</strong> PyTorch, deep RL pipelines (PPO-style), reward design, domain randomization, evaluation suites</li>
+                <li><strong>Control & optimization:</strong> MPC, iLQR/DDP, MPPI, constrained control (QP-style formulations), system identification basics</li>
+                <li><strong>Tooling:</strong> Linux, Git, Docker, experiment automation, reproducibility (configs, logging, CI)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2>Selected Projects</h2>
+
+        <div class="project-list">
+            <div class="project-card">
+                <h3>Dynamic manipulation of deformable linear objects (DLO)</h3>
+                <p class="project-subtitle">Differentiable simulation and control prototyping for underactuated, contact-rich dynamics.</p>
+                <ul>
+                    <li>Built a GPU-accelerated simulation workflow to study elastic DLO dynamics and fast, whip-like motion primitives.</li>
+                    <li>Designed an optimization-friendly pipeline for trajectory optimization / MPC-style rollouts and analysis.</li>
+                    <li>Focused on practical modeling issues: stiffness/constraint tuning, contact handling, and failure modes.</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>Quadruped locomotion with deep reinforcement learning</h3>
+                <p class="project-subtitle">Training, evaluation, and robustness testing in Isaac Gym / legged-gym style environments.</p>
+                <ul>
+                    <li>Set up a training pipeline for locomotion policies and standardized evaluation across terrains and disturbances.</li>
+                    <li>Explored reward shaping, curriculum ideas, and domain randomization to improve robustness and generalization.</li>
+                    <li>Built reproducible experiment scripts and logging to support fair comparisons across settings.</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>Bayesian optimization for PID gain tuning</h3>
+                <p class="project-subtitle">Data-efficient controller tuning for motor trajectory tracking.</p>
+                <ul>
+                    <li>Formulated PID tuning as a black-box optimization problem with trajectory-tracking metrics.</li>
+                    <li>Applied Bayesian optimization to search gains efficiently and improve sinusoidal tracking performance.</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>Soft robotic gripper prototyping</h3>
+                <p class="project-subtitle">From design to fabrication: mold making, material selection, casting, and actuation integration.</p>
+                <ul>
+                    <li>Designed molds (3D printed) and experimented with materials and casting workflows for soft fingers.</li>
+                    <li>Integrated actuation and tested grasping of common objects with practical constraints.</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>Custom end-effector and open-loop motion planning</h3>
+                <p class="project-subtitle">Mechanical design and open-loop trajectory planning for a task-specific tool (helmet opening).</p>
+                <ul>
+                    <li>Designed and fabricated a task-oriented mechanism (rigid parts via 3D printing) and integrated actuation.</li>
+                    <li>Implemented open-loop motion planning and execution on a robotic arm prototype.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Zehong Lei.</p>
+    </footer>
+</div>
+</body>
+</html>

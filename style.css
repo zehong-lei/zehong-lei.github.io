@@ -1,0 +1,133 @@
+/* 基础设置 */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 100%;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e6e6e6;
+    margin: 20px 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    color: #2c3e50;
+}
+
+.subtitle {
+    margin: 0 0 6px 0;
+}
+
+/* Header 样式 */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* 圆形头像 */
+    object-fit: cover;
+    border: 3px solid #eee;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.tagline {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.content-block {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* 链接按钮化 */
+.social-links .btn {
+    text-decoration: none;
+    background: #2c3e50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-right: 10px;
+}
+
+.social-links .btn:hover {
+    background: #34495e;
+}
+
+/* 兴趣标签样式 */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #e1ecf4;
+    color: #2c3e50;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* 项目卡片样式 */
+.project-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 16px;
+}
+
+.project-card h3 {
+    margin: 0 0 6px 0;
+    color: #2980b9;
+}
+
+.project-subtitle {
+    margin: 0 0 10px 0;
+    color: #666;
+}
+
+.project-item {
+    margin-bottom: 15px;
+}
+
+.project-item h4 {
+    margin-bottom: 5px;
+    color: #2980b9;
+}
+
+
+/* Content lists */
+.content-block ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.content-block li {
+    margin-bottom: 6px;
+}
