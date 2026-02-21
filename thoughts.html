@@ -47,39 +47,36 @@
         <h2>Thoughts</h2>
 
         <div class="content-block">
-          <p class="section-note">
+          <!-- <p class="section-note">
             Notes, fragments, quotes, and things worth keeping. Use one card per entry.
-          </p>
+          </p> -->
 
           <div class="entry-list">
             <article class="entry-card">
               <div class="entry-header">
-                <h3>On speed and patience</h3>
-                <div class="entry-meta">2026-02-xx · note</div>
+                <h3>"这才是少女心事，这才是生长痛"</h3>
+                <!-- 不要日期就把这一行删掉 -->
+                <!-- <div class="entry-meta">2026-02-xx · video</div> -->
               </div>
-
-              <blockquote class="quote">“You can move fast without being rushed.”</blockquote>
-
-              <p class="entry-text">
-                A short paragraph goes here. Keep it concise: one topic per entry, 5–10 lines.
-              </p>
-
-              <div class="embed">
-                <iframe
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title="Embedded video"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
+            
+              <!-- 本地视频：把 src 改成你的视频相对路径 -->
+              <div class="video-block">
+                <video controls preload="metadata" playsinline>
+                  <source src="assets/videos/my_video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
-
+            
+              <!-- source 链接：把 href 改成你要引用的原链接 -->
               <div class="card-links">
-                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Source</a>
+                <a class="btn secondary" href="https://example.com/source-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-link"></i> Source
+                </a>
               </div>
             </article>
 
             <article class="entry-card">
-              <div class="entry-header">
+              <!-- <div class="entry-header">
                 <h3>Collected words</h3>
                 <div class="entry-meta">ongoing · excerpts</div>
               </div>
@@ -88,7 +85,7 @@
                 <li>A line you like.</li>
                 <li>Another line.</li>
                 <li>A third line.</li>
-              </ul>
+              </ul> -->
             </article>
           </div>
         </div>
