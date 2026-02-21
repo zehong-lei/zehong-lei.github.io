@@ -305,30 +305,18 @@ hr{
   font-size: 0.95em;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 760px){
-  .container{ padding: 14px; }
-  .profile-header{ flex-direction: column; align-items: flex-start; }
-  .avatar{ width: 120px; height: 120px; }
-  .gallery{ grid-template-columns: 1fr; }
-  .gallery-item img{ height: 200px; }
-}
-
-/* Local video sizing */
+/* Make local video smaller and centered */
 .video-block{
-  margin-top: 12px;
+  max-width: 520px !important;   /* 关键：改小，例如 480/520/560 */
+  width: 100% !important;
+  margin: 12px auto 0 !important;
   border-radius: 12px;
   overflow: hidden;
   background: #000;
-
-  /* 控制显示宽度：在大屏不会铺满 */
-  max-width: 720px;   /* 你可以改成 640/800 */
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .video-block video{
-  width: 100%;
-  height: auto;
+  width: 100% !important;
+  height: auto !important;
   display: block;
 }
