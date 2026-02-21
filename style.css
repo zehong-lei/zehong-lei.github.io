@@ -313,3 +313,22 @@ hr{
   .gallery{ grid-template-columns: 1fr; }
   .gallery-item img{ height: 200px; }
 }
+
+/* Local video sizing */
+.video-block{
+  margin-top: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+
+  /* 控制显示宽度：在大屏不会铺满 */
+  max-width: 720px;   /* 你可以改成 640/800 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-block video{
+  width: 100%;
+  height: auto;
+  display: block;
+}
