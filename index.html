@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Zehong Lei - Personal homepage." />
-  <title>Zehong Lei | Personal</title>
+  <meta name="description" content="Zehong Lei - Academic homepage." />
+  <title>Zehong Lei | Academic</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
   <div class="container">
-
-    <header>
+    <header class="site-header">
       <div class="profile-header">
         <img src="20230904_143148.jpg" alt="Zehong Lei" class="avatar" />
         <div class="header-text">
@@ -23,9 +25,7 @@
             M.Sc. in Mechatronics and Robotics @
             <a href="https://www.polimi.it/" target="_blank" rel="noopener noreferrer">Politecnico di Milano</a>
           </p>
-          <p class="tagline">
-            "Everything is an optimization problem. If we can solve it fast enough (1kHz), we can control anything."
-          </p>
+          <p class="tagline">"Everything is an optimization problem. If we can solve it fast enough (1kHz), we can control anything."</p>
 
           <div class="social-links">
             <a href="mailto:zehonglei@outlook.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
@@ -35,236 +35,82 @@
         </div>
       </div>
 
-      <!-- Tabs -->
       <nav class="top-tabs" aria-label="Primary">
-        <button class="tab-btn" type="button" data-target="academic" aria-controls="panel-academic">
-          Academic
-        </button>
-        <button class="tab-btn" type="button" data-target="travel" aria-controls="panel-travel">
-          Travel
-        </button>
-        <button class="tab-btn" type="button" data-target="thoughts" aria-controls="panel-thoughts">
-          Thoughts
-        </button>
+        <a class="tab-link active" href="index.html" aria-current="page">Academic</a>
+        <a class="tab-link" href="travel.html">Travel</a>
+        <a class="tab-link" href="thoughts.html">Thoughts</a>
       </nav>
     </header>
 
     <hr />
 
-    <!-- Panels: only one visible at a time -->
     <main>
-      <!-- ====== Academic (default) ====== -->
-      <section id="panel-academic" class="panel" data-panel="academic">
+      <section>
         <h2>Academic</h2>
 
         <div class="content-block">
           <h3>About / Focus</h3>
           <p>
             I build optimization-based planning & control systems for robots, with a focus on contact-rich dynamics.
+            This section is the default view of the site.
           </p>
         </div>
 
-        <div class="content-block" style="margin-top: 14px;">
+        <div class="content-block">
           <h3>Research Interests</h3>
           <div class="tags-container">
             <span class="tag">Contact-Rich Manipulation</span>
             <span class="tag">Optimization-based planning & control</span>
             <span class="tag">Learned / Differentiable dynamics</span>
-            <span class="tag">Visuo-tactile / Multimodal</span>
+            <span class="tag">Multimodal sensing</span>
           </div>
         </div>
 
-        <div class="content-block" style="margin-top: 14px;">
+        <div class="content-block">
           <h3>Skills</h3>
-          <ul>
+          <ul class="nice-list">
             <li>Python, C++, ROS2, Git, Linux</li>
-            <li>NVIDIA Warp, Isaac Gym, Mujoco</li>
-            <li>CasADi, acados, Drake, PyTorch</li>
+            <li>Mujoco / Isaac Gym</li>
+            <li>PyTorch, CasADi / acados</li>
           </ul>
         </div>
 
-        <div class="content-block" style="margin-top: 14px;">
+        <div class="content-block">
           <h3>Selected Projects</h3>
+
           <div class="project-list">
-            <div class="project-card">
-              <h4>Dynamic manipulation of deformable linear objects (DLO)</h4>
-              <p class="project-subtitle">Differentiable simulation and control prototyping for contact-rich dynamics.</p>
-              <ul>
-                <li><!-- TODO --></li>
+            <article class="project-card">
+              <h4>Project A</h4>
+              <p class="project-subtitle">One-line description of what it is.</p>
+              <ul class="nice-list">
+                <li>Key contribution / result 1</li>
+                <li>Key contribution / result 2</li>
               </ul>
-            </div>
-
-            <div class="project-card">
-              <h4>Quadruped locomotion with deep reinforcement learning</h4>
-              <p class="project-subtitle">Training, evaluation, and robustness testing in Isaac Gym / legged-gym style envs.</p>
-              <ul>
-                <li><!-- TODO --></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ====== Travel ====== -->
-      <section id="panel-travel" class="panel" data-panel="travel">
-        <h2>Travel</h2>
-
-        <div class="content-block">
-          <p class="section-note">Places I’ve been to, with photos/videos and quick notes.</p>
-
-          <div class="entry-list">
-            <article class="entry-card">
-              <div class="entry-header">
-                <h3>Italy · Puglia</h3>
-                <div class="entry-meta">2026 · Bari / Lecce / Matera</div>
-              </div>
-              <p class="entry-text">Old towns, coastlines, and slow mornings.</p>
-
-              <div class="gallery">
-                <figure class="gallery-item">
-                  <img src="assets/travel/puglia_01.jpg" alt="Puglia photo 1">
-                  <figcaption>Polignano a Mare</figcaption>
-                </figure>
-                <figure class="gallery-item">
-                  <img src="assets/travel/puglia_02.jpg" alt="Puglia photo 2">
-                  <figcaption>Lecce streets</figcaption>
-                </figure>
-                <figure class="gallery-item">
-                  <img src="assets/travel/puglia_03.jpg" alt="Puglia photo 3">
-                  <figcaption>Matera at dusk</figcaption>
-                </figure>
-                <figure class="gallery-item">
-                  <img src="assets/travel/puglia_04.jpg" alt="Puglia photo 4">
-                  <figcaption>Sea & wind</figcaption>
-                </figure>
-              </div>
-
-              <div class="entry-links">
-                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer">
-                  <i class="fas fa-images"></i> Album
-                </a>
-                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer">
-                  <i class="fas fa-video"></i> Video
-                </a>
+              <div class="card-links">
+                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Project</a>
+                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
               </div>
             </article>
 
-            <article class="entry-card">
-              <div class="entry-header">
-                <h3>Japan · Tokyo</h3>
-                <div class="entry-meta">YYYY · neighborhoods / food / walks</div>
-              </div>
-              <p class="entry-text">Placeholder entry.</p>
-              <div class="entry-links">
-                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-images"></i> Album</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ====== Thoughts ====== -->
-      <section id="panel-thoughts" class="panel" data-panel="thoughts">
-        <h2>Thoughts</h2>
-
-        <div class="content-block">
-          <p class="section-note">Notes, fragments, quotes, and things worth keeping.</p>
-
-          <div class="entry-list">
-            <article class="entry-card">
-              <div class="entry-header">
-                <h3>On speed and patience</h3>
-                <div class="entry-meta">2026-02-xx · note</div>
-              </div>
-
-              <blockquote class="quote">“You can move fast without being rushed.”</blockquote>
-
-              <p class="entry-text">
-                A short paragraph goes here. Keep it concise—one idea per entry.
-              </p>
-
-              <div class="embed">
-                <iframe
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title="Embedded video"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-              </div>
-
-              <div class="entry-links">
-                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Source</a>
-              </div>
-            </article>
-
-            <article class="entry-card">
-              <div class="entry-header">
-                <h3>Collected words</h3>
-                <div class="entry-meta">ongoing · excerpts</div>
-              </div>
-              <ul class="mini-list">
-                <li>A line you like.</li>
-                <li>Another line.</li>
-                <li>A third line.</li>
+            <article class="project-card">
+              <h4>Project B</h4>
+              <p class="project-subtitle">One-line description of what it is.</p>
+              <ul class="nice-list">
+                <li>Key contribution / result 1</li>
+                <li>Key contribution / result 2</li>
               </ul>
+              <div class="card-links">
+                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-file"></i> Paper</a>
+              </div>
             </article>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <p>&copy; 2026 Zehong Lei.</p>
     </footer>
-
   </div>
-
-  <script>
-    (function () {
-      const btns = Array.from(document.querySelectorAll(".tab-btn"));
-      const panels = Array.from(document.querySelectorAll(".panel"));
-
-      function setActive(name, pushHash = true) {
-        // buttons
-        btns.forEach(b => {
-          const on = b.dataset.target === name;
-          b.classList.toggle("active", on);
-          b.setAttribute("aria-selected", on ? "true" : "false");
-        });
-
-        // panels
-        panels.forEach(p => {
-          const on = p.dataset.panel === name;
-          p.classList.toggle("active", on);
-          p.hidden = !on;
-        });
-
-        // persist
-        try { localStorage.setItem("activePanel", name); } catch (e) {}
-
-        // hash
-        if (pushHash) {
-          const newHash = "#" + name;
-          if (location.hash !== newHash) history.replaceState(null, "", newHash);
-        }
-      }
-
-      // events
-      btns.forEach(b => b.addEventListener("click", () => setActive(b.dataset.target)));
-
-      // initial: hash > localStorage > academic
-      const hashName = (location.hash || "").replace("#", "").trim();
-      let initial = "academic";
-      if (["academic", "travel", "thoughts"].includes(hashName)) initial = hashName;
-      else {
-        try {
-          const saved = localStorage.getItem("activePanel");
-          if (["academic", "travel", "thoughts"].includes(saved)) initial = saved;
-        } catch (e) {}
-      }
-      setActive(initial, true);
-    })();
-  </script>
 </body>
 </html>
-
