@@ -1,5 +1,3 @@
-cat <<'EOF' >> style.css
-
 /* ===== Tabs (top switch) ===== */
 .top-tabs{
   display:flex;
@@ -134,4 +132,4 @@ cat <<'EOF' >> style.css
   .gallery{ grid-template-columns:1fr; }
   .gallery-item img{ height:200px; }
 }
-EOF
+
