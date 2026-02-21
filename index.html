@@ -1,245 +1,271 @@
+cat <<'EOF' > index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Zehong Lei - M.Sc. student in Mechatronics & Robotics at Politecnico di Milano.">
-    <title>Zehong Lei | Personal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Zehong Lei - Personal homepage." />
+  <title>Zehong Lei | Personal</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-<div class="container">
+  <div class="container">
 
     <header>
-        <div class="profile-header">
-            <img src="20230904_143148.jpg" alt="Zehong Lei" class="avatar">
-            <div class="header-text">
-                <h1>Zehong Lei</h1>
-                <p class="subtitle">M.Sc. in Mechatronics and Robotics @
-                    <a href="https://www.polimi.it/" target="_blank" rel="noopener noreferrer">Politecnico di Milano</a>
-                </p>
-                <p class="tagline">"Everything is an optimization problem. If we can solve it fast enough (1kHz), we can control anything."</p>
+      <div class="profile-header">
+        <img src="20230904_143148.jpg" alt="Zehong Lei" class="avatar" />
+        <div class="header-text">
+          <h1>Zehong Lei</h1>
+          <p class="subtitle">
+            M.Sc. in Mechatronics and Robotics @
+            <a href="https://www.polimi.it/" target="_blank" rel="noopener noreferrer">Politecnico di Milano</a>
+          </p>
+          <p class="tagline">
+            "Everything is an optimization problem. If we can solve it fast enough (1kHz), we can control anything."
+          </p>
 
-                <div class="social-links">
-                    <a href="mailto:zehonglei@outlook.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
-                    <a href="https://github.com/zehong-lei" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> GitHub</a>
-                    <!-- <a href="assets/ZehongLei_CV.pdf" class="btn"><i class="fas fa-file"></i> CV (PDF)</a> -->
-                    <!-- <a href="#" class="btn"><i class="fas fa-graduation-cap"></i> Google Scholar</a> -->
-                    <!-- <a href="#" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a> -->
-                </div>
-            </div>
+          <div class="social-links">
+            <a href="mailto:zehonglei@outlook.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://github.com/zehong-lei" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> GitHub</a>
+            <!-- <a href="assets/ZehongLei_CV.pdf" class="btn"><i class="fas fa-file"></i> CV (PDF)</a> -->
+          </div>
         </div>
+      </div>
 
-        <!-- New: top navigation -->
-        <nav class="top-nav">
-            <a href="#about">About</a>
-            <a href="#academic">Academic</a>
-            <a href="#travel">Travel</a>
-            <a href="#thoughts">Thoughts</a>
-        </nav>
+      <!-- Tabs -->
+      <nav class="top-tabs" aria-label="Primary">
+        <button class="tab-btn" type="button" data-target="academic" aria-controls="panel-academic">
+          Academic
+        </button>
+        <button class="tab-btn" type="button" data-target="travel" aria-controls="panel-travel">
+          Travel
+        </button>
+        <button class="tab-btn" type="button" data-target="thoughts" aria-controls="panel-thoughts">
+          Thoughts
+        </button>
+      </nav>
     </header>
 
-    <hr>
+    <hr />
 
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <div class="content-block">
-            <p>
-                <!-- TODO: 2-4 lines bio -->
-                I build optimization-based planning & control systems for robots, with a focus on contact-rich dynamics.
-                This page collects my academic work, travel fragments, and personal notes.
-            </p>
-        </div>
-    </section>
-
-    <!-- Academic (keep your original sections, grouped) -->
-    <section id="academic" class="academic">
+    <!-- Panels: only one visible at a time -->
+    <main>
+      <!-- ====== Academic (default) ====== -->
+      <section id="panel-academic" class="panel" data-panel="academic">
         <h2>Academic</h2>
 
-        <div class="subsection">
-            <h3>Research Interests</h3>
-            <div class="content-block">
-                <div class="tags-container">
-                    <span class="tag">Contact-Rich Manipulation</span>
-                    <span class="tag">Optimization-based planning & control</span>
-                    <span class="tag">Learned / Differentiable dynamics</span>
-                    <span class="tag">Visuo-tactile / Multimodal</span>
-                </div>
-            </div>
+        <div class="content-block">
+          <h3>About / Focus</h3>
+          <p>
+            I build optimization-based planning & control systems for robots, with a focus on contact-rich dynamics.
+          </p>
         </div>
 
-        <div class="subsection">
-            <h3>Skills</h3>
-            <div class="content-block">
-                <ul>
-                    <li>Python, C++, ROS2, Git, Linux</li>
-                    <li>NVIDIA Warp, Isaac Gym, Mujoco</li>
-                    <li>CasADi, acados, Drake, PyTorch</li>
-                </ul>
-            </div>
+        <div class="content-block" style="margin-top: 14px;">
+          <h3>Research Interests</h3>
+          <div class="tags-container">
+            <span class="tag">Contact-Rich Manipulation</span>
+            <span class="tag">Optimization-based planning & control</span>
+            <span class="tag">Learned / Differentiable dynamics</span>
+            <span class="tag">Visuo-tactile / Multimodal</span>
+          </div>
         </div>
 
-        <div class="subsection">
-            <h3>Selected Projects</h3>
-
-            <div class="project-list">
-                <div class="project-card">
-                    <h4>Dynamic manipulation of deformable linear objects (DLO)</h4>
-                    <p class="project-subtitle">Differentiable simulation and control prototyping for underactuated, contact-rich dynamics.</p>
-                    <ul>
-                        <!-- TODO: add bullets -->
-                    </ul>
-                </div>
-
-                <div class="project-card">
-                    <h4>Quadruped locomotion with deep reinforcement learning</h4>
-                    <p class="project-subtitle">Training, evaluation, and robustness testing in Isaac Gym / legged-gym style environments.</p>
-                    <ul>
-                        <!-- TODO: add bullets -->
-                    </ul>
-                </div>
-            </div>
+        <div class="content-block" style="margin-top: 14px;">
+          <h3>Skills</h3>
+          <ul>
+            <li>Python, C++, ROS2, Git, Linux</li>
+            <li>NVIDIA Warp, Isaac Gym, Mujoco</li>
+            <li>CasADi, acados, Drake, PyTorch</li>
+          </ul>
         </div>
-    </section>
 
-    <hr>
+        <div class="content-block" style="margin-top: 14px;">
+          <h3>Selected Projects</h3>
+          <div class="project-list">
+            <div class="project-card">
+              <h4>Dynamic manipulation of deformable linear objects (DLO)</h4>
+              <p class="project-subtitle">Differentiable simulation and control prototyping for contact-rich dynamics.</p>
+              <ul>
+                <li><!-- TODO --></li>
+              </ul>
+            </div>
 
-    <!-- New: Travel -->
-    <section id="travel" class="travel">
+            <div class="project-card">
+              <h4>Quadruped locomotion with deep reinforcement learning</h4>
+              <p class="project-subtitle">Training, evaluation, and robustness testing in Isaac Gym / legged-gym style envs.</p>
+              <ul>
+                <li><!-- TODO --></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== Travel ====== -->
+      <section id="panel-travel" class="panel" data-panel="travel">
         <h2>Travel</h2>
+
         <div class="content-block">
-            <p class="section-note">
-                <!-- TODO: short note -->
-                Places I’ve been to, with photos/videos and quick notes.
-            </p>
+          <p class="section-note">Places I’ve been to, with photos/videos and quick notes.</p>
 
-            <!-- Travel entries -->
-            <div class="entry-list">
+          <div class="entry-list">
+            <article class="entry-card">
+              <div class="entry-header">
+                <h3>Italy · Puglia</h3>
+                <div class="entry-meta">2026 · Bari / Lecce / Matera</div>
+              </div>
+              <p class="entry-text">Old towns, coastlines, and slow mornings.</p>
 
-                <article class="entry-card">
-                    <div class="entry-header">
-                        <h3>Italy · Puglia</h3>
-                        <div class="entry-meta">2026 · Bari / Lecce / Matera</div>
-                    </div>
-                    <p class="entry-text">
-                        <!-- TODO: 2-3 lines summary -->
-                        Old towns, coastlines, and slow mornings. A collection of photos and short clips.
-                    </p>
+              <div class="gallery">
+                <figure class="gallery-item">
+                  <img src="assets/travel/puglia_01.jpg" alt="Puglia photo 1">
+                  <figcaption>Polignano a Mare</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/travel/puglia_02.jpg" alt="Puglia photo 2">
+                  <figcaption>Lecce streets</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/travel/puglia_03.jpg" alt="Puglia photo 3">
+                  <figcaption>Matera at dusk</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/travel/puglia_04.jpg" alt="Puglia photo 4">
+                  <figcaption>Sea & wind</figcaption>
+                </figure>
+              </div>
 
-                    <!-- Gallery grid -->
-                    <div class="gallery">
-                        <!-- TODO: replace images -->
-                        <figure class="gallery-item">
-                            <img src="assets/travel/puglia_01.jpg" alt="Puglia photo 1">
-                            <figcaption>Polignano a Mare</figcaption>
-                        </figure>
-                        <figure class="gallery-item">
-                            <img src="assets/travel/puglia_02.jpg" alt="Puglia photo 2">
-                            <figcaption>Lecce streets</figcaption>
-                        </figure>
-                        <figure class="gallery-item">
-                            <img src="assets/travel/puglia_03.jpg" alt="Puglia photo 3">
-                            <figcaption>Matera at dusk</figcaption>
-                        </figure>
-                        <figure class="gallery-item">
-                            <img src="assets/travel/puglia_04.jpg" alt="Puglia photo 4">
-                            <figcaption>Sea & wind</figcaption>
-                        </figure>
-                    </div>
+              <div class="entry-links">
+                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-images"></i> Album
+                </a>
+                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-video"></i> Video
+                </a>
+              </div>
+            </article>
 
-                    <div class="entry-links">
-                        <!-- TODO: put album / video links -->
-                        <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-images"></i> Album</a>
-                        <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-video"></i> Video</a>
-                    </div>
-                </article>
-
-                <article class="entry-card">
-                    <div class="entry-header">
-                        <h3>Japan · Tokyo</h3>
-                        <div class="entry-meta">YYYY · neighborhoods / food / walks</div>
-                    </div>
-                    <p class="entry-text">
-                        <!-- TODO -->
-                        Placeholder entry. Replace with your own travel notes and media.
-                    </p>
-                    <div class="entry-links">
-                        <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-images"></i> Album</a>
-                    </div>
-                </article>
-
-            </div>
+            <article class="entry-card">
+              <div class="entry-header">
+                <h3>Japan · Tokyo</h3>
+                <div class="entry-meta">YYYY · neighborhoods / food / walks</div>
+              </div>
+              <p class="entry-text">Placeholder entry.</p>
+              <div class="entry-links">
+                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-images"></i> Album</a>
+              </div>
+            </article>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <hr>
-
-    <!-- New: Thoughts -->
-    <section id="thoughts" class="thoughts">
+      <!-- ====== Thoughts ====== -->
+      <section id="panel-thoughts" class="panel" data-panel="thoughts">
         <h2>Thoughts</h2>
+
         <div class="content-block">
-            <p class="section-note">
-                <!-- TODO -->
-                Notes, fragments, quotes, and things worth keeping.
-            </p>
+          <p class="section-note">Notes, fragments, quotes, and things worth keeping.</p>
 
-            <div class="entry-list">
-                <article class="entry-card">
-                    <div class="entry-header">
-                        <h3>On speed and patience</h3>
-                        <div class="entry-meta">2026-02-xx · note</div>
-                    </div>
+          <div class="entry-list">
+            <article class="entry-card">
+              <div class="entry-header">
+                <h3>On speed and patience</h3>
+                <div class="entry-meta">2026-02-xx · note</div>
+              </div>
 
-                    <blockquote class="quote">
-                        <!-- TODO: quote or excerpt -->
-                        “You can move fast without being rushed.”
-                    </blockquote>
+              <blockquote class="quote">“You can move fast without being rushed.”</blockquote>
 
-                    <p class="entry-text">
-                        <!-- TODO: your paragraph -->
-                        A short paragraph goes here. Keep it concise—one idea per entry.
-                    </p>
+              <p class="entry-text">
+                A short paragraph goes here. Keep it concise—one idea per entry.
+              </p>
 
-                    <!-- Optional: embed a video (YouTube example) -->
-                    <div class="embed">
-                        <iframe
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                            title="Embedded video"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
+              <div class="embed">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Embedded video"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
 
-                    <div class="entry-links">
-                        <!-- TODO: source link -->
-                        <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Source</a>
-                    </div>
-                </article>
+              <div class="entry-links">
+                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Source</a>
+              </div>
+            </article>
 
-                <article class="entry-card">
-                    <div class="entry-header">
-                        <h3>Collected words</h3>
-                        <div class="entry-meta">ongoing · excerpts</div>
-                    </div>
-
-                    <ul class="mini-list">
-                        <li><!-- TODO --> A line you like.</li>
-                        <li><!-- TODO --> Another line.</li>
-                        <li><!-- TODO --> A third line.</li>
-                    </ul>
-                </article>
-            </div>
+            <article class="entry-card">
+              <div class="entry-header">
+                <h3>Collected words</h3>
+                <div class="entry-meta">ongoing · excerpts</div>
+              </div>
+              <ul class="mini-list">
+                <li>A line you like.</li>
+                <li>Another line.</li>
+                <li>A third line.</li>
+              </ul>
+            </article>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Zehong Lei.</p>
+      <p>&copy; 2026 Zehong Lei.</p>
     </footer>
 
-</div>
+  </div>
+
+  <script>
+    (function () {
+      const btns = Array.from(document.querySelectorAll(".tab-btn"));
+      const panels = Array.from(document.querySelectorAll(".panel"));
+
+      function setActive(name, pushHash = true) {
+        // buttons
+        btns.forEach(b => {
+          const on = b.dataset.target === name;
+          b.classList.toggle("active", on);
+          b.setAttribute("aria-selected", on ? "true" : "false");
+        });
+
+        // panels
+        panels.forEach(p => {
+          const on = p.dataset.panel === name;
+          p.classList.toggle("active", on);
+          p.hidden = !on;
+        });
+
+        // persist
+        try { localStorage.setItem("activePanel", name); } catch (e) {}
+
+        // hash
+        if (pushHash) {
+          const newHash = "#" + name;
+          if (location.hash !== newHash) history.replaceState(null, "", newHash);
+        }
+      }
+
+      // events
+      btns.forEach(b => b.addEventListener("click", () => setActive(b.dataset.target)));
+
+      // initial: hash > localStorage > academic
+      const hashName = (location.hash || "").replace("#", "").trim();
+      let initial = "academic";
+      if (["academic", "travel", "thoughts"].includes(hashName)) initial = hashName;
+      else {
+        try {
+          const saved = localStorage.getItem("activePanel");
+          if (["academic", "travel", "thoughts"].includes(saved)) initial = saved;
+        } catch (e) {}
+      }
+      setActive(initial, true);
+    })();
+  </script>
 </body>
 </html>
+EOF
