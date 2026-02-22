@@ -153,55 +153,7 @@ hr{
   color: var(--muted);
 }
 
-.nice-list{
-  padding-left: 20px;
-  margin: 8px 0 0 0;
-}
-
-.nice-list li{
-  margin-bottom: 6px;
-}
-
-/* ===== Tags ===== */
-.tags-container{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.tag{
-  background: var(--pill);
-  color: var(--title);
-  padding: 5px 10px;
-  border-radius: 999px;
-  font-size: 0.9em;
-  font-weight: 500;
-}
-
-/* ===== Project cards ===== */
-.project-list{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
-}
-
-.project-card{
-  background: #fff;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-}
-
-.project-card h4{
-  margin-bottom: 6px;
-  color: #2980b9;
-}
-
-.project-subtitle{
-  margin: 0 0 10px 0;
-  color: var(--muted);
-}
-
+/* ===== Project / generic links container ===== */
 .card-links{
   margin-top: 10px;
   display: flex;
@@ -209,7 +161,7 @@ hr{
   gap: 10px;
 }
 
-/* ===== Travel / Thoughts entries ===== */
+/* ===== Entries ===== */
 .entry-list{
   display: flex;
   flex-direction: column;
@@ -237,68 +189,35 @@ hr{
   font-size: 0.9em;
 }
 
-.entry-text{
-  margin: 8px 0 10px 0;
-  color: #444;
-}
-
-.quote{
-  margin: 10px 0;
-  padding: 10px 12px;
-  background: #f7f7f7;
-  border-left: 4px solid var(--pill);
-  border-radius: 10px;
-  color: #333;
-}
-
-/* ===== Gallery (photo-set style) ===== */
-/* default: 1 column, good for single image */
+/* ===== Gallery (stacked, no cropping) ===== */
 .gallery{
   margin-top: 12px;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* 永远单列，竖排 */
   gap: 12px;
-}
-
-/* two-up layout on desktop */
-@media (min-width: 760px){
-  .gallery.two{
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* keep single image full width, no centering shrink */
-.gallery.one{
-  grid-template-columns: 1fr;
 }
 
 .gallery-item{
   margin: 0;
   border-radius: 14px;
   overflow: hidden;
-
-  /* remove nested-card look */
   background: transparent;
   border: none;
 }
 
-/* consistent visual frame */
+/* 关键：不裁切，保持原比例 */
 .gallery-item img{
   width: 100%;
   height: auto;
   display: block;
-
-  /* unified rhythm: change to 21/9 if you want more cinematic */
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
 }
 
-/* hide captions (clean gallery). remove if you want captions. */
+/* captions隐藏（需要就改成 display:block 并写样式） */
 .gallery-item figcaption{
   display: none;
 }
 
-/* ===== Responsive video embed ===== */
+/* ===== Responsive video embed (for thoughts) ===== */
 .embed{
   position: relative;
   width: 100%;
@@ -316,7 +235,6 @@ hr{
   height: 100%;
 }
 
-/* Make local video smaller and centered */
 .video-block{
   max-width: 520px;
   width: 100%;
