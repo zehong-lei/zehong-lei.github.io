@@ -153,14 +153,6 @@ hr{
   color: var(--muted);
 }
 
-/* ===== Project / generic links container ===== */
-.card-links{
-  margin-top: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
 /* ===== Entries ===== */
 .entry-list{
   display: flex;
@@ -193,7 +185,7 @@ hr{
 .gallery{
   margin-top: 12px;
   display: grid;
-  grid-template-columns: 1fr; /* 永远单列，竖排 */
+  grid-template-columns: 1fr;   /* always stacked */
   gap: 12px;
 }
 
@@ -205,14 +197,29 @@ hr{
   border: none;
 }
 
-/* 关键：不裁切，保持原比例 */
+/* Keep full image, no cropping */
 .gallery-item img{
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* captions隐藏（需要就改成 display:block 并写样式） */
+/* ===== Portrait special: narrower and centered (no cropping) ===== */
+.gallery-item.portrait{
+  max-width: 420px;          /* 调整这个：380/420/460 */
+  margin: 0 auto;            /* 居中 */
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Ensure portrait img follows container width */
+.gallery-item.portrait img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* captions hidden */
 .gallery-item figcaption{
   display: none;
 }
@@ -262,4 +269,9 @@ hr{
   .container{ padding: 14px; }
   .profile-header{ flex-direction: column; align-items: flex-start; }
   .avatar{ width: 120px; height: 120px; }
+
+  /* On small screens, portrait shouldn't be too narrow */
+  .gallery-item.portrait{
+    max-width: 100%;
+  }
 }
