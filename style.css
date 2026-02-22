@@ -275,3 +275,21 @@ hr{
     max-width: 100%;
   }
 }
+
+/* Thoughts: two portrait images side-by-side */
+.gallery.two-portrait{
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.gallery.two-portrait .gallery-item.portrait{
+  max-width: 100%;
+  margin: 0;
+}
+
+/* small screens: stack */
+@media (max-width: 760px){
+  .gallery.two-portrait{
+    grid-template-columns: 1fr;
+  }
+}
