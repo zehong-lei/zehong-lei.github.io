@@ -153,6 +153,20 @@ hr{
   color: var(--muted);
 }
 
+/* ===== About / Focus highlight blocks ===== */
+.focus-block p{
+  background: #f3f7fb;
+  border: 1px solid #e3ebf3;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 0 0 10px 0;
+  color: #2f4356;
+}
+
+.focus-block p:last-child{
+  margin-bottom: 0;
+}
+
 /* ===== Entries ===== */
 .entry-list{
   display: flex;
@@ -206,13 +220,12 @@ hr{
 
 /* ===== Portrait special: narrower and centered (no cropping) ===== */
 .gallery-item.portrait{
-  max-width: 420px;          /* 调整这个：380/420/460 */
-  margin: 0 auto;            /* 居中 */
+  max-width: 420px;
+  margin: 0 auto;
   border-radius: 14px;
   overflow: hidden;
 }
 
-/* Ensure portrait img follows container width */
 .gallery-item.portrait img{
   width: 100%;
   height: auto;
@@ -270,7 +283,6 @@ hr{
   .profile-header{ flex-direction: column; align-items: flex-start; }
   .avatar{ width: 120px; height: 120px; }
 
-  /* On small screens, portrait shouldn't be too narrow */
   .gallery-item.portrait{
     max-width: 100%;
   }
