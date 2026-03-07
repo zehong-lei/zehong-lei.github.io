@@ -167,6 +167,69 @@ hr{
   margin-bottom: 0;
 }
 
+/* ===== Research Interests chips ===== */
+.interest-grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.interest-chip{
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #e1ecf4;
+  color: #2c3e50;
+  font-size: 0.95em;
+  font-weight: 500;
+  line-height: 1.4;
+  border: 1px solid #d6e6f2;
+}
+
+/* ===== Skills ===== */
+.nice-list{
+  padding-left: 20px;
+  margin: 8px 0 0 0;
+}
+
+.nice-list li{
+  margin-bottom: 6px;
+}
+
+/* ===== Project / generic links container ===== */
+.card-links{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ===== Project cards ===== */
+.project-list{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.project-card{
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.project-card h4{
+  margin-bottom: 6px;
+  color: #2980b9;
+}
+
+.project-subtitle{
+  margin: 0 0 10px 0;
+  color: var(--muted);
+}
+
 /* ===== Entries ===== */
 .entry-list{
   display: flex;
@@ -199,7 +262,7 @@ hr{
 .gallery{
   margin-top: 12px;
   display: grid;
-  grid-template-columns: 1fr;   /* always stacked */
+  grid-template-columns: 1fr;
   gap: 12px;
 }
 
@@ -211,7 +274,6 @@ hr{
   border: none;
 }
 
-/* Keep full image, no cropping */
 .gallery-item img{
   width: 100%;
   height: auto;
@@ -270,6 +332,17 @@ hr{
   display: block;
 }
 
+/* ===== Thoughts: two portrait images side-by-side ===== */
+.gallery.two-portrait{
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.gallery.two-portrait .gallery-item.portrait{
+  max-width: 100%;
+  margin: 0;
+}
+
 /* ===== Footer ===== */
 .site-footer{
   margin-top: 20px;
@@ -286,21 +359,7 @@ hr{
   .gallery-item.portrait{
     max-width: 100%;
   }
-}
 
-/* Thoughts: two portrait images side-by-side */
-.gallery.two-portrait{
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.gallery.two-portrait .gallery-item.portrait{
-  max-width: 100%;
-  margin: 0;
-}
-
-/* small screens: stack */
-@media (max-width: 760px){
   .gallery.two-portrait{
     grid-template-columns: 1fr;
   }
