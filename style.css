@@ -153,20 +153,6 @@ hr{
   color: var(--muted);
 }
 
-/* ===== About / Focus highlight blocks ===== */
-.focus-block p{
-  background: #f3f7fb;
-  border: 1px solid #e3ebf3;
-  border-radius: 10px;
-  padding: 10px 14px;
-  margin: 0 0 10px 0;
-  color: #2f4356;
-}
-
-.focus-block p:last-child{
-  margin-bottom: 0;
-}
-
 /* ===== Research Interests chips ===== */
 .interest-grid{
   display: flex;
