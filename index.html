@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Zehong Lei - Academic homepage." /> 
+  <title>Zehong Lei | Academic</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="profile-header">
+        <img src="20230904_143148.jpg" alt="Zehong Lei" class="avatar" />
+        <div class="header-text">
+          <h1>Zehong Lei</h1>
+            <p class="subtitle">
+              M.Sc. student in Mechatronics and Robotics @
+              <a href="https://www.polimi.it/" target="_blank" rel="noopener noreferrer">Politecnico di Milano</a>
+            </p>
+            <p class="subtitle">
+              B.Eng. in Mechanical Engineering, Shandong University
+            </p>
+          <p class="tagline">"Hierarchical Robotic System"</p>
+
+          <div class="social-links">
+            <a href="mailto:zehonglei@outlook.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://github.com/zehong-lei" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <nav class="top-tabs" aria-label="Primary">
+        <a class="tab-link active" href="index.html" aria-current="page">Academic</a>
+        <a class="tab-link" href="footprints.html">Footprints</a>
+        <a class="tab-link" href="thoughts.html">Thoughts</a>
+      </nav>
+    </header>
+
+    <hr />
+
+    <main>
+      <section>
+        <h2>Academic</h2>
+
+        <div class="content-block">
+          <h3>About / Focus</h3>
+            <p>
+              While current research increasingly seeks to blur hierarchical boundaries through end-to-end learning and cross-layer optimization, hierarchical architectural thinking remains a fundamental foundation for robotics.
+            </p>
+            
+            <p>
+              Hierarchical Robotic System: Decision-making → Predictive control → Reactive control, with safety across all layers.
+            </p>
+            
+            <p>
+              My work focuses on integrating learning-based methods with optimization-based control for autonomous decision-making and robust physical interaction.
+            </p>
+        </div>
+
+        <div class="content-block">
+          <h3>Research Interests</h3>
+          <div class="interest-grid">
+            <span class="interest-chip">LfD for Contact-Rich Manipulation</span>
+            <span class="interest-chip">Optimization-based Control</span>
+            <span class="interest-chip">Learning-based Dynamics Model</span>
+            <span class="interest-chip">GenAI + RL</span>
+          </div>
+        </div>
+
+        <div class="content-block">
+          <h3>Selected Projects</h3>
+
+          <div class="project-list">
+            <article class="project-card">
+              <h4>Learning-Based Dynamics and Safe Planning for Contact-Rich Manipulation</h4>
+              <p class="project-subtitle">Fast decision-making for ridge push and pick-and-place through learned dynamics, planning, reinforcement learning, and safety constraints.</p>
+              <ul class="nice-list">
+                <li>Ridge push and pick-and-place under contact-rich dynamics</li>
+                <li>Planning / RL with a CBF safety branch</li>
+              </ul>
+              <div class="card-links">
+                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Overview</a>
+                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <h4>VLM-Based Task Planning and Intention Inference for Robotic Manipulation</h4>
+              <p class="project-subtitle">A semantic planning framework that uses vision-language models for intention inference and multi-object manipulation.</p>
+              <ul class="nice-list">
+                <li>High-level intention inference from multimodal input</li>
+                <li>Multi-object planning toward target configurations</li>
+              </ul>
+              <div class="card-links">
+                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Overview</a>
+                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <h4>Inverse Reinforcement Learning for Cost Function Recovery in Robotics</h4>
+              <p class="project-subtitle">Learning latent cost functions from demonstrations for robot planning, control, and contact-rich decision-making.</p>
+              <ul class="nice-list">
+                <li>Cost recovery from expert trajectories</li>
+                <li>Learned objectives for downstream planning and control</li>
+              </ul>
+              <div class="card-links">
+                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Overview</a>
+                <a class="btn secondary" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Zehong Lei.</p>
+    </footer>
+  </div>
+</body>
+</html>
