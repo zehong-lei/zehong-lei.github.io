@@ -208,7 +208,7 @@ hr{
 
 .project-card h4{
   margin-bottom: 6px;
-  color: #2980b9;
+  color: var(--title);
 }
 
 .project-subtitle{
